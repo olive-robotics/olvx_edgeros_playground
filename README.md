@@ -12,6 +12,6 @@ Simple python ROS 2 package/node to start working with the Olive™ SOM (System 
 # Dependencies 
 
 ```
-pip install RPi.GPIO
+pip install pyserial
 pip install smbus2
 ```
