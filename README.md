@@ -8,3 +8,10 @@ Simple python ROS 2 package/node to start working with the Olive™ SOM (System 
 * I2C
 * LEDs
 * Button
+
+# Dependencies 
+
+```
+pip install RPi.GPIO
+pip install smbus2
+```
