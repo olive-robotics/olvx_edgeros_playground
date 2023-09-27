@@ -1,5 +1,5 @@
 # olv_som_playground_py
-Simple python ROS 2 examples to start working with the Olive™ EdgeROS.
+Simple python ROS 2 examples to start working with the Olive™ EdgeROS™.
 
 # Included examples
 
@@ -8,8 +8,8 @@ Simple python ROS 2 examples to start working with the Olive™ EdgeROS.
 >> * Reset Button
 
 * Analog
->> * ADC 
->> * PWM 
+  * ADC 
+  * PWM 
 
 * Interface
 >> * CAN
