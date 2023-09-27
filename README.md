@@ -3,14 +3,20 @@ Simple python ROS 2 package/node to start working with the Olive™ SOM (System 
 
 # Included examples
 
-* ADC 
-* PWM 
-* I2C
-* LEDs
-* Button
+* GPIO
+>> * User LED
+>> * Reset Button
+
+* Analog
+>> * ADC 
+>> * PWM 
+
+* Interface
+>> * CAN
+>> * Serial
+>> * I2C
 
 # Dependencies 
-
 ```
 pip install pyserial
 pip install smbus2
