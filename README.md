@@ -12,9 +12,9 @@ Simple python ROS 2 examples to start working with the Olive™ EdgeROS™.
   * PWM 
 
 * Interface
-* CAN
-* Serial
-* I2C
+  * CAN
+  * Serial
+  * I2C
 
 # Dependencies 
 ```
