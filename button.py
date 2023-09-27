@@ -1,40 +1,29 @@
 import rclpy
 from rclpy.node import Node
-import RPi.GPIO as GPIO
+from std_msgs.msg import Bool
 
-class ButtonNode(Node):
+RESET_BUTTON_GPIO = '/sys/class/gpio/gpiochip7/gpio8/value'
+
+class ResetButtonPublisher(Node):
+    
     def __init__(self):
-        super().__init__('button_node')
-
-        # Pin Setup:
-        self.button_pin = BUTTON_GPIO_PIN  # Change this to your actual GPIO pin
-        GPIO.setmode(GPIO.BCM)  # Broadcom pin-numbering scheme
-        GPIO.setup(self.button_pin, GPIO.IN)  # Button pin set as input
-
-        # TODO: Define your ROS2 subscriptions, services, etc. here
-
-        self.create_timer(0.1, self.read_button_status)  # 10 Hz timer
-
-    def read_button_status(self):
-        status = GPIO.input(self.button_pin)
-        self.get_logger().info(f'Button status: {"Pressed" if status else "Released"}')
-
-        # TODO: Publish this status on a topic, or respond to service requests with this status
-
-    def shutdown(self):
-        GPIO.cleanup()  # cleanup all GPIO
+        super().__init__('reset_button_publisher')
+        self.publisher = self.create_publisher(Bool, 'reset_button_status', 10)
+        timer_period = 0.1  # 100ms
+        self.timer = self.create_timer(timer_period, self.timer_callback)
+        
+    def timer_callback(self):
+        with open(RESET_BUTTON_GPIO, 'r') as gpio:
+            value = gpio.read().strip()
+        msg = Bool(data=bool(int(value)))
+        self.publisher.publish(msg)
 
 def main(args=None):
     rclpy.init(args=args)
-
-    node = ButtonNode()
-
-    rclpy.spin(node)
-
-    node.shutdown()
-
+    reset_button_publisher = ResetButtonPublisher()
+    rclpy.spin(reset_button_publisher)
+    reset_button_publisher.destroy_node()
     rclpy.shutdown()
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
-
