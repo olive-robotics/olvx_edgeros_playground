@@ -51,6 +51,6 @@ pip install smbus2
 This project is open-source and available under the MIT License.
 
 ## 💼 Support and Contribution
-- 🐞 **Issues:** Experiencing issues or have ideas? Open an issue here.
-- 🔀 **Pull Requests:** Contributions are always welcomed! Create your pull request here.
+- 🐞 **Issues:** Experiencing issues or have ideas? Open an issue.
+- 🔀 **Pull Requests:** Contributions are always welcomed! Create your pull request.
 
