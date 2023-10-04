@@ -45,6 +45,7 @@ Ensure smooth execution of examples by installing the necessary Python packages:
 ```shell
 pip install pyserial
 pip install smbus2
+```
 
 ## 📄 License
 This project is open-source and available under the MIT License.
