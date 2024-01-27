@@ -2,6 +2,9 @@
 
 Welcome to the Olive™ EdgeROS™ Playground, where you can explore Python ROS 2 through a series of instructive and interactive examples designed specifically for the Olive™ EdgeROS™ platform.
 
+<img width="792" alt="Screenshot 2024-01-27 at 13 32 35" src="https://github.com/olive-robotics/olv_edgeros_playground_py/assets/6655052/b3bdc003-fd33-4f28-ae89-0ddddc54c6c9">
+
+
 ## 🎯 Included Examples
 
 ### 🚥 GPIO (General-Purpose Input/Output)
